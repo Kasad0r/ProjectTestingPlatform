@@ -2,7 +2,7 @@ package MainController;
 
 public class PascalTriengular {
     public static void main(String[] args) {
-        getPascal(12);
+        getPascal(500);
     }
 
     public static void getPascal(int length) {

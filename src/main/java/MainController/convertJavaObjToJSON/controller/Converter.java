@@ -21,11 +21,11 @@ public class Converter {
 
     public static User toJavaObject() {
         ObjectMapper mapper = new ObjectMapper();
-        try {
-            return mapper.readValue(new File(baseFile), User.class);
+     /*   try {
+            return mapper.readValue(new File(bxaseFile), User.class);
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
         return null;
     }
 }
