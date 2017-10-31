@@ -1,9 +1,10 @@
-package MainController.AISD.lr2;
+package MainController.AISD.lr2_3;
 
 public class StackController {
     private int size;
-    private int[] stackArr;
+    static private int[] stackArr;
     private int top = -1;
+    private boolean updateArray = false;
 
     public StackController(int size) {
         this.size = size;
@@ -19,7 +20,17 @@ public class StackController {
     public void push(int i) {
         top++;
         System.out.println("Pushing " + i);
+        if(updateArray)
+        updateStackSize();
         stackArr[top] = i;
+    }
+
+    void updateStackSize() {
+        if (top == stackArr.length - 1) {
+            int stackTemp[] = stackArr;
+            stackArr = new int[(stackTemp.length * 3) / 2 + 1];
+            System.arraycopy(stackTemp, 0, stackArr, 0, stackTemp.length);
+        }
     }
 
     /**
@@ -31,6 +42,7 @@ public class StackController {
         int i = stackArr[top];
         top--;
         System.out.println("Popping " + i);
+        stackArr[top]=0;
         return i;
     }
 
@@ -63,6 +75,14 @@ public class StackController {
 
     public int[] getStackArr() {
         return stackArr;
+    }
+
+    public boolean isUpdateArray() {
+        return updateArray;
+    }
+
+    public void setUpdateArray(boolean updateArray) {
+        this.updateArray = updateArray;
     }
 }
 
@@ -338,6 +358,76 @@ public class StackController {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
- done by kasad0r
+ * done by kasad0r
  **/

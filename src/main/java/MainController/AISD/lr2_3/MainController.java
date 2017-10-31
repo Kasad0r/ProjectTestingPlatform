@@ -1,9 +1,10 @@
-package MainController.AISD.lr2;
+package MainController.AISD.lr2_3;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Scanner;
-
-public class MainController {
+public class MainController implements Serializable{
+    static final String SERIALIZATION_ID = "68_73_77_65_80_82_79_78_89_65_75_73_78";
     public static void main(String[] args) {
         menu();
     }
@@ -27,6 +28,10 @@ public class MainController {
                     case 1: {
                         System.out.println("Введите размер");
                         mainController = new StackController(sc.nextInt());
+                        System.out.println("Использовать динамический массив?");
+                        System.out.println("1.Да\n 2.Нет");
+                        if(1 == sc.nextInt())
+                            mainController.setUpdateArray(true);
                         break;
                     }
                     case 2: {

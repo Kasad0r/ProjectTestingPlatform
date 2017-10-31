@@ -103,7 +103,6 @@ public class Main {
     private void add() {
         objectList.add(createEmployee());
     }
-
     private Employee createEmployee() {
         Scanner sc = new Scanner(System.in);
         Employee employee = new Employee();
@@ -121,5 +120,6 @@ public class Main {
         }
         return employee;
     }
+
 
 }
