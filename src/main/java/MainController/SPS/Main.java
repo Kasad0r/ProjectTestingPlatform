@@ -44,22 +44,6 @@ public class Main {
         System.out.println(a);
     }
 
-    static void sort(int arr[]) {
-        int arrLength = arr.length;
-        int temp = 0;
-        for (int i = 0; i < arrLength; i++) {
-            for (int j = 1; j < (arrLength - i); j++) {
-                if (arr[j - 1] > arr[j]) {
-                    temp = arr[j - 1];
-                    arr[j - 1] = arr[j];
-                    arr[j] = temp;
-                }
-            }
-        }
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
-        }
-    }
 
     static void swapStartEnd() {
         int start = 0;

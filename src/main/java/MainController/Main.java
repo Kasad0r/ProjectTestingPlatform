@@ -9,23 +9,15 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Timer;
+import java.util.*;
 import java.util.concurrent.*;
 
-/*  int a = 0xFF0;
-        int b = 0xF0F;
-        int c = 0x0FF;
-        System.out.println(a + "\t" + b + "\t" +c );
-        c = a = (a ^ b | a & b) ^ c;
-        System.out.println((c | a) ^ (c & a));
-        System.out.println(a + "\t" + b + "\t" +c );*/
 public class Main {
+
+
     public static void main(String[] args) {
       int [] arr ={1,3,2,5,6,2,1,};
-      
+
     }
 
     public int cout(int a, int b) {

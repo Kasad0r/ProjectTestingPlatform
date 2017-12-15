@@ -3,15 +3,17 @@ package MainController.AISD.lr2_3;
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Scanner;
-public class MainController implements Serializable{
+
+public class MainController implements Serializable {
     static final String SERIALIZATION_ID = "68_73_77_65_80_82_79_78_89_65_75_73_78";
+
     public static void main(String[] args) {
         menu();
     }
 
     private static void menu() {
         Scanner sc = new Scanner(System.in);
-        StackController mainController = null;
+        StackController mainController = null;            //Создание ссылки для управления стэком
         boolean exit = true;
         while (exit) {
             System.out.println("1.\tСоздать стэк");
@@ -27,10 +29,10 @@ public class MainController implements Serializable{
                 switch (sc.nextInt()) {
                     case 1: {
                         System.out.println("Введите размер");
-                        mainController = new StackController(sc.nextInt());
+                        mainController = new StackController(sc.nextInt()); //При инициализации , в конструкторе пишем размер стэка
                         System.out.println("Использовать динамический массив?");
                         System.out.println("1.Да\n 2.Нет");
-                        if(1 == sc.nextInt())
+                        if (1 == sc.nextInt())
                             mainController.setUpdateArray(true);
                         break;
                     }
@@ -61,7 +63,8 @@ public class MainController implements Serializable{
                         mainController.swap();
                         break;
 
-                        default: exit=false;
+                    default:
+                        exit = false;
                 }
             } catch (Exception e) {
                 System.out.println("try again");

@@ -1,8 +1,11 @@
 package MainController;
 
 public class PascalTriengular {
+
     public static void main(String[] args) {
-        getPascal(500);
+
+        System.out.println(args[0] +args[1]);
+        System.out.println(args[1]);
     }
 
     public static void getPascal(int length) {
